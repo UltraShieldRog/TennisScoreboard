@@ -15,7 +15,7 @@ class MatchEngine:
 
         while (not self.is_end):
             if verbose:
-                print(f"Which player scores the next point? (Options: {list(range(1,Match.NUM_OF_PLAYER+1))})\n")
+                print(f"Which player scores the next point? (Options: {list(range(1,Match.NUM_OF_PLAYER+1))})")
             
             user_input = input()
             self.match.win_score(int(user_input))
@@ -41,3 +41,4 @@ class MatchEngine:
         print(f"Set scores: {current_set.get_score_recorder()}")
         current_game = current_set.get_current_game()
         print(f"Game scores: {current_game.get_score_recorder()}")
+        print()
